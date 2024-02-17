@@ -8,31 +8,35 @@ public class Lesson1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число от 1 до 5");
         int choice = scanner.nextInt();
-
         Random random = new Random();
-
-        if (choice == 1) {
-            greetings();
-        } else if (choice == 2) {
-            checkSign((int)(Math.random() * 20), (int)(Math.random() * 10), (int)(Math.random() * 30));
-        } else if (choice == 3) {
-            selectColor();
-        } else if (choice == 4) {
-            compareNumbers();
-        } else if (choice == 5) {
-            addOrSubtractAndPrint((int)(Math.random() * 10), (int)(Math.random() * 20), random.nextBoolean());
-        } else {
-            System.out.println("Попросил же, от 1 до 5");
+        switch (choice) {
+            case (1):
+                greetings();
+                break;
+            case (2):
+                checkSign((int)(Math.random() * 20), (int)(Math.random() * 10), (int)(Math.random() * 30));
+                break;
+            case (3):
+                selectColor();
+                break;
+            case (4):
+                compareNumbers();
+                break;
+            case (5):
+                addOrSubtractAndPrint((int)(Math.random() * 10), (int)(Math.random() * 20), random.nextBoolean());
+                break;
+            default:
+                System.out.println("Попросил же, от 1 до 5");
+                break;
         }
-
-
     }
 
     public static void greetings() {
-        System.out.println("Hello");
-        System.out.println("World");
-        System.out.println("from");
-        System.out.println("Java");
+        System.out.println("""
+                Hello
+                World
+                from
+                Java""");
     }
 
     public static void checkSign(int a, int b, int c) {

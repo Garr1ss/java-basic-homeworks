@@ -11,7 +11,7 @@ public class Application {
         cat.info();
         cat.swim(4);
         cat.info();
-        cat.swim(12);
+        cat.run(12);
         cat.info();
     }
 }
